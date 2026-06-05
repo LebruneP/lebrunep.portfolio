@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Ethan Lebrun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="menu">
+      <span class="nav-logo">EL · Portfolio</span>
+      <ul>
+        <li><a href="Index.html">Accueil</a></li>
+        <li><a href="Projet.html">Projet</a></li>
+        <li><a href="CV.html">CV</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Activer le mode sombre">
+            <div class="theme-toggle-track" id="toggleTrack">
+              <div class="theme-toggle-thumb"></div>
+            </div>
+            <span class="theme-toggle-label" id="toggleLabel">Dark</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ethan Lebrun</h1>
+    <p class="intro">
+      Je suis en <strong>première année de BUT Informatique</strong>. Je suis motivé à acquérir les compétences nécessaires
+      pour devenir <strong>Développeur Logiciel</strong>, particulièrement attiré par le
+      <strong>backend</strong>, bien que le frontend m'intéresse également.
+    </p>
+
+    <div class="main-grid-box">
+
+      <div id="box1" class="Box">
+        <h2>Parcours de Spécialisation</h2>
+        <h3>Réalisation d'applications</h3>
+        <p>Conception, développement et validation, ce parcours correspond parfaitement à
+          mon attrait pour la construction de logiciels robustes, du design à l'implémentation.</p>
+      </div>
+
+      <div id="box2" class="Box">
+        <h2>Contacts</h2>
+        <div class="categorie">
+          <h3>Numéro de Téléphone</h3>
+          <p>+33 6 58 37 76 11</p>
+        </div>
+        <div class="categorie">
+          <h3>Adresse Mail</h3>
+          <p>ethan.lebrun@outlook.fr</p>
+        </div>
+      </div>
+
+      <div id="box3" class="Box">
+        <h2>Compétences et Langages</h2>
+        <div class="categorie">
+          <h3>Programmation Orienté Objet</h3>
+          <p>Java</p>
+          <p>JavaFX</p>
+        </div>
+        <div class="categorie">
+          <h3>Développement Web</h3>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>PHP</p>
+          <p>JavaScript</p>
+        </div>
+        <div class="categorie">
+          <h3>Gestinon de Donnée</h3>
+          <p>SQL</p>
+          <p>postgresql</p>
+        </div>
+        <div class="categorie">
+          <h3>Utilisation en ligne de commande</h3>
+          <p>Konsole</p>
+          <p>terminal</p>
+        </div>
+        <br>
+        <div class="categorie">
+          <h3>Compétence professionel</h3>
+          <p>Droit</p>
+          <p>Comptabilité</p>
+          <p>Gestion d'entreprise</p>
+          <p>Gestion de projet</p>
+        </div>
+      </div>
+    </div>
+    <div class="zoneboutondubas">
+      <a href="Projet.html" class="boutondubas">Projet</a>
+    </div>
+    
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <h2 class="footer-link-title">↓ Liens utiles ↓</h2>
+      <div class="footer-link-background">
+
+        <div class="link-box">
+          <h3 class="footer-link-title">↓ Liens universitaires ↓</h3>
+          <ul>
+            <li><b>Site IUT2</b></li>
+            <li><a href="http://exemple.com">: exemple.com</a></li>
+            <li><b>Site IUT2 Map</b></li>
+            <li><a href="http://exemple.com">: exemple.com</a></li>
+            <li><b>Site UGA</b></li>
+            <li><a href="http://exemple.com">: exemple.com</a></li>
+            <li><b>Site UGA Map</b></li>
+            <li><a href="http://exemple.com">: exemple.com</a></li>
+          </ul>
+        </div>
+
+        <div class="link-box">
+          <h3 class="footer-link-title">↓ Liens personnels ↓</h3>
+          <ul>
+            <li><b>Accueil</b></li>
+            <li><a href="Index.html">: Page d'Accueil</a></li>
+            <li><b>Projets</b></li>
+            <li><a href="Projet.html">: Page Projet</a></li>
+            <li><b>CV</b></li>
+            <li><a href="CV.html">: CV</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <!-- script mode sombre -->
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const track = document.getElementById('toggleTrack');
+  const label = document.getElementById('toggleLabel');
+  let dark = false;
+  toggle.addEventListener('click', () => {
+    dark = !dark;
+    document.body.classList.toggle('dark-mode', dark);
+    track.classList.toggle('on', dark);
+    label.textContent = dark ? 'Light' : 'Dark';
+  });
+</script>
+<!-- script mode sombre -->
+
+
+
+</body>
+</html>
