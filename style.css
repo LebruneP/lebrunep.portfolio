@@ -350,10 +350,14 @@ p.intro strong { color: var(--text); font-weight: 700; }
 /* ══════════════════════════════════════════
    PAGE PROJETS
 ══════════════════════════════════════════ */
+/* Plusieurs projets par ligne selon la largeur disponible.
+   align-items: start => une carte dépliée ne étire pas ses voisines :
+   elle grandit seule et pousse vers le bas les lignes suivantes. */
 .projet-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+  gap: 1.6rem;
+  align-items: start;
 }
 
 .projet-card {
@@ -361,6 +365,7 @@ p.intro strong { color: var(--text); font-weight: 700; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: relative;
 }
@@ -376,8 +381,9 @@ p.intro strong { color: var(--text); font-weight: 700; }
 
 /* Zone image */
 .projet-img-wrap {
-  flex: 0 0 380px;
-  min-height: 220px;
+  flex: none;
+  width: 100%;
+  height: 210px;
   position: relative;
   background: var(--bg-surface);
   overflow: hidden;
@@ -490,7 +496,4 @@ p.intro strong { color: var(--text); font-weight: 700; }
 @media (max-width: 700px) {
   .main-grid-box { grid-template-columns: 1fr; }
   #box1, #box2, #box3 { grid-column: 1 / 2; grid-row: auto; }
-
-  .projet-card { flex-direction: column; }
-  .projet-img-wrap { flex: none; width: 100%; min-height: 180px; }
 }
