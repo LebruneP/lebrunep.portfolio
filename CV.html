@@ -13,8 +13,8 @@
     <nav class="menu">
       <span class="nav-logo">EL · Portfolio</span>
       <ul>
-        <li><a href="Index.html">Accueil</a></li>
-        <li><a href="Projet.html">Projet</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Projet.html">Projets</a></li>
         <li><a href="CV.html">CV</a></li>
         <li>
           <button class="theme-toggle" id="themeToggle" aria-label="Activer le mode sombre">
@@ -29,63 +29,44 @@
   </header>
 
   <main style="padding: 0; height: calc(100vh - 59px);">
-    <iframe src="BUT_2026_CV.pdf" style="width: 100%; height: 100%; border: none; display: block;"></iframe>
+    <iframe src="BUT_2026_CV.pdf" title="CV d'Ethan Lebrun" style="width: 100%; height: 100%; border: none; display: block;"></iframe>
   </main>
 
   <footer class="footer">
-      <div class="footer-container">
-        <h2 class="footer-link-title">↓ Liens utiles ↓</h2>
-        <div class="footer-link-background">
+    <div class="footer-container">
+      <h2 class="footer-link-title">↓ Liens utiles ↓</h2>
+      <div class="footer-link-background">
 
-          <div class="link-box">
-            <h3 class="footer-link-title">↓ Liens universitaires ↓</h3>
-            <ul>
-              <li><b>Site IUT2</b></li>
-              <li><a href="http://exemple.com">: exemple.com</a></li>
-              <li><b>Site IUT2 Map</b></li>
-              <li><a href="http://exemple.com">: exemple.com</a></li>
-              <li><b>Site UGA</b></li>
-              <li><a href="http://exemple.com">: exemple.com</a></li>
-              <li><b>Site UGA Map</b></li>
-              <li><a href="http://exemple.com">: exemple.com</a></li>
-            </ul>
-          </div>
-
-          <div class="link-box">
-            <h3 class="footer-link-title">↓ Liens personnels ↓</h3>
-            <ul>
-              <li><b>Accueil</b></li>
-              <li><a href="">: Page d'Accueil</a></li>
-              <li><b>Projets</b></li>
-              <li><a href="Projet.html">: Page Projet</a></li>
-              <li><b>CV</b></li>
-              <li><a href="CV.html">: CV</a></li>
-            </ul>
-          </div>
-
+        <div class="link-box">
+          <h3 class="footer-link-title">↓ Liens universitaires ↓</h3>
+          <ul>
+            <li><b>Site IUT2</b></li>
+            <li><a href="https://iut2.univ-grenoble-alpes.fr" target="_blank" rel="noopener">iut2.univ-grenoble-alpes.fr</a></li>
+            <li><b>Plan IUT2</b></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=IUT2+Grenoble" target="_blank" rel="noopener">Voir sur la carte</a></li>
+            <li><b>Site UGA</b></li>
+            <li><a href="https://www.univ-grenoble-alpes.fr" target="_blank" rel="noopener">univ-grenoble-alpes.fr</a></li>
+            <li><b>Plan UGA</b></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Universit%C3%A9+Grenoble+Alpes+campus" target="_blank" rel="noopener">Voir sur la carte</a></li>
+          </ul>
         </div>
+
+        <div class="link-box">
+          <h3 class="footer-link-title">↓ Liens personnels ↓</h3>
+          <ul>
+            <li><b>Accueil</b></li>
+            <li><a href="index.html">Page d'accueil</a></li>
+            <li><b>Projets</b></li>
+            <li><a href="Projet.html">Page projets</a></li>
+            <li><b>CV</b></li>
+            <li><a href="CV.html">Mon CV</a></li>
+          </ul>
+        </div>
+
       </div>
-    </footer>
+    </div>
+  </footer>
 
-
-
-
-
-
-  <!-- script mode sombre -->
-  <script>
-    const toggle = document.getElementById('themeToggle');
-    const track = document.getElementById('toggleTrack');
-    const label = document.getElementById('toggleLabel');
-    let dark = false;
-    toggle.addEventListener('click', () => {
-      dark = !dark;
-      document.body.classList.toggle('dark-mode', dark);
-      track.classList.toggle('on', dark);
-      label.textContent = dark ? 'Light' : 'Dark';
-    });
-  </script>
-  <!-- script mode sombre -->
-
+  <script src="script.js"></script>
 </body>
 </html>
